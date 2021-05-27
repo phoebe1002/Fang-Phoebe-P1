@@ -14,12 +14,21 @@ variables:
   buildConfiguration: 'Release'
  
 steps:
+  - task: SonarCloudPrepare@1
+    inputs:
+      SonarCloud: 'Sonar Cloud'
+      organization: '210503-reston-net'
+      scannerMode: 'MSBuild'
+      projectKey: '210503-Reston-NET_Fang-Phoebe-P1'
+      projectName: 'Fang-Phoebe-P1'
+      
   - task: DotNetCoreCLI@2
     displayName: Restore
     inputs:
       command: 'restore'
       projects: $(solution)
       feedsToUse: 'select'
+
   - task: DotNetCoreCLI@2
     displayName: Build
     inputs:
@@ -52,10 +61,3 @@ steps:
       WebAppName: 'bbtApp'
       packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
   
-  - task: SonarCloudPrepare@1
-    inputs:
-      SonarCloud: 'Sonar Cloud'
-      organization: '210503-reston-net'
-      scannerMode: 'MSBuild'
-      projectKey: '210503-Reston-NET_Fang-Phoebe-P1'
-      projectName: 'Fang-Phoebe-P1'
