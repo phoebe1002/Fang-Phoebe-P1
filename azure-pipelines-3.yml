@@ -41,9 +41,9 @@ steps:
       projects: '**/StoreApp/StoreTests/*.csproj'
   
   - task: SonarCloudPublish@1
-    displayName: Run Code Anaylsis
+    displayName: Run Code Analysis
   - task: SonarCloudPublish@1
-    displayName: Publish Code Anaylsis
+    displayName: Publish Code Analysis
 
   - task: DotNetCoreCLI@2
     displayName: Publish
