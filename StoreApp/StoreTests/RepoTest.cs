@@ -45,7 +45,7 @@ namespace StoreApp.StoreTests
                 List<Inventory> result = _repo.GetInventories(_repo.GetLocationById(1));
                 
                 Assert.Equal(2, result.Count);
-                Assert.Equal("Classic Milk", result[0].Product.Name);
+                Assert.Equal(1, result[0].LocationId);
             }
         }
 
