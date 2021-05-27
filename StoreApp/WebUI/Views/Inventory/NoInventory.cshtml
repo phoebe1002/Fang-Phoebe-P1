@@ -1,0 +1,52 @@
+@model IEnumerable<WebUI.Models.InventoryVM>
+@{
+    ViewData["Title"] = "NoInventory";
+}
+
+<h1>Branch: @ViewBag.Location.Name </h1>
+<h4>Address: @ViewBag.Location.Address</h4>
+<h3>Products have no inventory yet</h3>
+
+<p>
+    <a asp-action="Create">Create New Product</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.ActionLink("Edit Inventory", "Edit", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

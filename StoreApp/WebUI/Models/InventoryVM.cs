@@ -33,8 +33,7 @@ namespace WebUI.Models
 
         public int ProductId { get; set; }
         public int LocationId { get; set; }
-
-        //public Product Product { get; set; }
+        public Product Product { get; set; }
         
     }
 }

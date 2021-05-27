@@ -1,14 +1,14 @@
 @model IEnumerable<WebUI.Models.ProductVM>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "HasInventory";
 }
 
 <h1>Branch: @ViewBag.Location.Name </h1>
 <h4>Address: @ViewBag.Location.Address</h4>
-<h3>Available Products</h3>
+<h3>Products have no inventory yet</h3>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New Product</a>
 </p>
 <table class="table">
     <thead>
@@ -44,9 +44,7 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @* @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | *@
                 @Html.ActionLink("Add Inventory", "Create", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id }) |
-                @* @Html.ActionLink("View Order History", "Index", "Review", new { id = item.Id }) | *@
             </td>
         </tr>
 }

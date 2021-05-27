@@ -1,0 +1,38 @@
+@model WebUI.Models.InventoryVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<h1>@ViewBag.Location.Name</h1>
+<h2>Product Details</h2>
+<h3>@ViewBag.Product.Name</h3>
+<h3>@ViewBag.Product.Price</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="LocationId" value=@Model.LocationId/>
+            <input type="hidden" asp-for="ProductId" value=@Model.ProductId/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Back to list of Products", "Index", "Product")
+</p>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

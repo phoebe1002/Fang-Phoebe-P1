@@ -37,9 +37,8 @@
             </td>
             <td>
                 @* @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | *@
-                @Html.ActionLink("Manage Products", "NoInventory", "Product", new { locationId = item.Id}) |
-                @Html.ActionLink("Manage Inventory", "HasInventory", "Inventory", new { locationId = item.Id}) |
-                @* @Html.ActionLink("View Order History", "Index", "Review", new { id = item.Id }) | *@
+                @Html.ActionLink("Manage Products", "Index", "Product", new { locationId = item.Id }) |
+                @Html.ActionLink("View Order History", "Index", "Review", new { id = item.Id }) |
             </td>
         </tr>
 }

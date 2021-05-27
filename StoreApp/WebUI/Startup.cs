@@ -40,7 +40,7 @@ namespace WebUI
             services.AddScoped<ICustomerBL, CustomerBL>();
             services.AddScoped<ILocationBL, LocationBL>();
             services.AddScoped<IProductBL, ProductBL>();
-            services.AddScoped<InventoryBL, InventoryBL>();
+            services.AddScoped<IInventoryBL, InventoryBL>();
         }
         // This method parse postgreSQL connection string from the appsettings.json
         public static string parseElephantSQLURL(string uriString)

@@ -5,23 +5,34 @@ using System.Linq;
 using StoreBL;
 using StoreModels;
 using WebUI.Models;
+using System.Collections.Generic;
+
 namespace WebUI.Controllers
 {
     public class ProductController : Controller
     {
         private IProductBL _productBL;
-        public ProductController(IProductBL productBL)
+        private ILocationBL _locationBL;
+        public ProductController(IProductBL productBL, ILocationBL locationBL)
         {
             _productBL = productBL;
+            _locationBL = locationBL;
         }
         public ActionResult Index()
         {
+            return View();
+        }
+        public ActionResult NoInventory(int locationId)
+        {
+            ViewBag.Location = _locationBL.GetLocationById(locationId);
+
             return View(_productBL
-                .GetAllProducts()
-                .Select(prod => new ProductVM(prod))
-                .ToList()
+            .GetAvailableProducts(_locationBL.GetLocationById(locationId))
+            .Select(prod => new ProductVM(prod))
+            .ToList()
             );
         }
+
         //GET
         public ActionResult Create()
         {
