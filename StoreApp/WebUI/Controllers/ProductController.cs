@@ -22,7 +22,7 @@ namespace WebUI.Controllers
         {
             return View();
         }
-        public ActionResult NoInventory(int locationId)
+        public ActionResult UnclaimedList(int locationId)
         {
             ViewBag.Location = _locationBL.GetLocationById(locationId);
 

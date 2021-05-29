@@ -1,6 +1,6 @@
-@model IEnumerable<WebUI.Models.ProductVM>
+@model IEnumerable<WebUI.Models.InventoryVM>
 @{
-    ViewData["Title"] = "HasInventory";
+    ViewData["Title"] = "ReplenishList";
 }
 
 <h1>Branch: @ViewBag.Location.Name </h1>
@@ -17,13 +17,13 @@
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Product.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Product.Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.Quantity)
             </th>
             <th></th>
         </tr>
@@ -35,16 +35,16 @@
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.Product.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.Product.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.ActionLink("Add Inventory", "Create", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id }) |
+                @Html.ActionLink("Edit Inventory", "Edit", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id })
             </td>
         </tr>
 }

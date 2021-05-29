@@ -27,7 +27,7 @@ namespace WebUI.Controllers
         }   
 
 
-        public ActionResult HasInventory(int locationId)
+        public ActionResult ReplenishList(int locationId)
         {
             ViewBag.Location = _locationBL.GetLocationById(locationId);
 
