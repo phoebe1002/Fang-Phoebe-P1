@@ -4,9 +4,13 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
+<h2>Branch: @ViewBag.Location.Name </h2>
+<h4>Address: @ViewBag.Location.Address</h4>
+<hr />
+<br>
+<h2>Create New Product</h2>
 <h4>Enter Product Details</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -27,6 +31,7 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+            <input type="hidden" asp-for="LocationId" value=@ViewBag.Location.Id/>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -35,7 +40,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Go back", "Index", "Location", new { })
 </div>
 
 @section Scripts {
