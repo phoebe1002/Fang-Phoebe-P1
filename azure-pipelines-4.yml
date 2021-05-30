@@ -6,7 +6,8 @@
 trigger:
 - main
  
-pool: Default
+pool: 
+  vm-image: windows-latest
  
 variables:
   solution: '**/StoreApp/*.sln'
@@ -39,13 +40,7 @@ steps:
     inputs:
       command: 'test'
       projects: '**/StoreApp/StoreTests/*.csproj'
-      arguments: --configuration $(buildConfiguration) --collect "Code Coverage"
   
-  - task: PublishCodeCoverageResults@1
-    inputs:
-      codeCoverageTool: 'Cobertura'
-      summaryFileLocation: '**/Cobertura/coverage.xml'
-      
   - task: SonarCloudPublish@1
     displayName: Run Code Analysis
   - task: SonarCloudPublish@1

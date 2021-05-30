@@ -28,7 +28,7 @@ steps:
       command: 'restore'
       projects: $(solution)
       feedsToUse: 'select'
- 
+
   - task: DotNetCoreCLI@2
     displayName: Build
     inputs:
@@ -39,18 +39,12 @@ steps:
     inputs:
       command: 'test'
       projects: '**/StoreApp/StoreTests/*.csproj'
-      arguments: --configuration $(buildConfiguration) --collect "Code Coverage"
   
-  - task: PublishCodeCoverageResults@1
-    inputs:
-      codeCoverageTool: 'Cobertura'
-      summaryFileLocation: '**/Cobertura/coverage.xml'
-      
   - task: SonarCloudPublish@1
     displayName: Run Code Analysis
   - task: SonarCloudPublish@1
     displayName: Publish Code Analysis
- 
+
   - task: DotNetCoreCLI@2
     displayName: Publish
     inputs:
@@ -66,3 +60,4 @@ steps:
       appType: 'webApp'
       WebAppName: 'bbtApp'
       packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+  
