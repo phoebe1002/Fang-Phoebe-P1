@@ -26,5 +26,7 @@ namespace WebUI.Models
         [Required]
         public string Description { get; set; }
         public int Id { get; set; }
+        
+        public int LocationId { get; set;}
     }
 }

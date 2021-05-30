@@ -1,15 +1,19 @@
 @model IEnumerable<WebUI.Models.InventoryVM>
 @{
-    ViewData["Title"] = "NoInventory";
+    ViewData["Title"] = "ReplenishList";
 }
 
-<h1>Branch: @ViewBag.Location.Name </h1>
+<h2>Branch: @ViewBag.Location.Name </h2>
 <h4>Address: @ViewBag.Location.Address</h4>
-<h3>Products have no inventory yet</h3>
+<hr />
+<br>
+<h3>List of Inventories</h3>
 
 <p>
-    <a asp-action="Create">Create New Product</a>
+    &#128269;Can't find the Inventory. &#128073;
+    @Html.ActionLink("Add New One", "UnclaimedList", "Product", new { locationId = ViewBag.Location.Id})
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -44,9 +48,13 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.ActionLink("Edit Inventory", "Edit", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id })
+                @Html.ActionLink("Edit Inventory", "Edit", "Inventory", new { id = item.Id })
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<div>
+    @Html.ActionLink("Back to Main", "Option", "Location", new { locationId = ViewBag.Location.Id})
+</div>

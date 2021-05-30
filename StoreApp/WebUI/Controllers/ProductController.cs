@@ -22,7 +22,7 @@ namespace WebUI.Controllers
         {
             return View();
         }
-        public ActionResult NoInventory(int locationId)
+        public ActionResult UnclaimedList(int locationId)
         {
             ViewBag.Location = _locationBL.GetLocationById(locationId);
 
@@ -34,8 +34,9 @@ namespace WebUI.Controllers
         }
 
         //GET
-        public ActionResult Create()
+        public ActionResult Create(int locationId)
         {
+            ViewBag.Location = _locationBL.GetLocationById(locationId);
             return View();
         }
         //POST
@@ -54,7 +55,7 @@ namespace WebUI.Controllers
                         Description = productVM.Description
                     }
                     );
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction(nameof(UnclaimedList), new { locationId = productVM.LocationId });
                 }
                 return View();
             }
