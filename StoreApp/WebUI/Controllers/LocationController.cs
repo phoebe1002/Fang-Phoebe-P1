@@ -25,6 +25,12 @@ namespace WebUI.Controllers
             .ToList()
             );
         }
+        
+        public ActionResult Option(int locationId)
+        {
+            ViewBag.Location = _locationBL.GetLocationById(locationId);
+            return View();
+        }
 
         //GET
         public ActionResult Create()

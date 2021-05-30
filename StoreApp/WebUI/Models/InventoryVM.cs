@@ -20,9 +20,10 @@ namespace WebUI.Models
 
         public InventoryVM(Inventory inventory)
         {
+            Id = inventory.Id;
+            Quantity = inventory.Quantity;
             LocationId = inventory.LocationId;
             ProductId = inventory.ProductId;
-            Quantity = inventory.Quantity;
         }
         
         public int Id { get; set; }

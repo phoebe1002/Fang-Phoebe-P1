@@ -3,13 +3,17 @@
     ViewData["Title"] = "UnclaimedList";
 }
 
-<h1>Branch: @ViewBag.Location.Name </h1>
+<h2>Branch: @ViewBag.Location.Name </h2>
 <h4>Address: @ViewBag.Location.Address</h4>
-<h3>Products have no inventory yet</h3>
+<hr />
+<br>
+<h3>List of Products</h3>
 
 <p>
-    <a asp-action="Create">Create New Product</a>
+    &#128269;Can't find the Product. &#128073;
+    @Html.ActionLink("Create new one", "Create", new {  locationId = ViewBag.Location.Id })
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -44,9 +48,17 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.ActionLink("Add Inventory", "Create", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id }) |
+                @Html.ActionLink("Add Inventory", "Create", "Inventory", new { locationId = ViewBag.Location.Id, productId = item.Id })
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<div>
+    @Html.ActionLink("Back to Main", "Option", "Location", new { locationId = ViewBag.Location.Id})
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
