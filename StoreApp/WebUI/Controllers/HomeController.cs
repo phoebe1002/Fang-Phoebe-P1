@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebUI.Models;
-using StoreModels;
-using Newtonsoft.Json;
-using Microsoft.AspNetCore.Http;
+using Serilog;
 
 namespace WebUI.Controllers
 {
@@ -23,14 +21,21 @@ namespace WebUI.Controllers
 
         public IActionResult Index()
         {
-            OrderVM order = new OrderVM();
-            //set value into a session key
-            HttpContext.Session.SetString("Cart", JsonConvert.SerializeObject(order));
             return View();
         }
 
         public IActionResult Privacy()
         {
+            _logger.LogInformation("Privacy Page");
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "This Exception From Privacy Page");
+            }
+
             return View();
         }
 
