@@ -1,0 +1,15 @@
+@model IEnumerable<WebUI.Models.CartVM>
+@{
+    ViewData["Title"] = "Main";
+}
+
+<h3> Hey @ViewBag.Customer.FirstName, @ViewData["Message"]</h3> 
+
+<br>
+<div>
+    @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
+</div>
+
+<div>
+    @Html.ActionLink("Continue Shopping", "SelectProduct", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id})
+</div>

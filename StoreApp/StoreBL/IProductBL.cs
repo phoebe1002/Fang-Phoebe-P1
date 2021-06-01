@@ -9,7 +9,7 @@ namespace StoreBL
         Product GetProductById(int id);
         Product AddProduct(Product product);
         List<Product> GetAllProducts();
-        List<Product> GetAvailableProducts(Location location);
+        List<Product> GetUnclaimedProducts(Location location);
         Dictionary<Product, Inventory> GetProductWithInventory(Location location);
         //HashSet<Item> GetAvaliableProducts(Location location);
         //Product GetProductById(int id);

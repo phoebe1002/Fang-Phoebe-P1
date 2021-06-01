@@ -1,0 +1,17 @@
+@model IEnumerable<WebUI.Models.CustomerVM>
+@{
+    ViewData["Title"] = "Main";
+}
+
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+<h4>Your Store: @ViewBag.Location.Name</h4>
+<hr />
+<br>
+
+<div>
+    @Html.ActionLink("Place an order", "SelectProduct", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id})
+</div>
+
+<div>
+    <a asp-action="Index">Back to Main</a>
+</div>

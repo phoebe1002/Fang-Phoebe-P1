@@ -24,8 +24,7 @@ namespace WebUI.Controllers
         {
             return View();
         }   
-
-
+        
         public ActionResult ReplenishList(int locationId)
         {
             ViewBag.Location = _locationBL.GetLocationById(locationId);

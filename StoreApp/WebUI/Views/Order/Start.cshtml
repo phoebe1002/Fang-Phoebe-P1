@@ -1,0 +1,61 @@
+@model IEnumerable<WebUI.Models.OrderVM>
+@{
+    ViewData["Title"] = "Start";
+    var stock = ViewBag.Stock;
+}
+
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+<h4>Your Store: @ViewBag.Location.Name</h4>
+<hr />
+<br>
+<h3>Available Products:</h3>
+
+@* <p>
+    &#128269;Can't find the Inventory. &#128073;
+    @Html.ActionLink("Add New One", "AvailableList", "Product", new { locationId = ViewBag.Location.Id})
+</p> *@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in stock) {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Product.Name
+            </td>
+            <td>
+                @item.Product.Price
+            </td>
+            <td>
+                @item.Quantity
+            </td>
+            <td>
+                @Html.ActionLink("View", "Create", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Back to Main", "Option", "Location", new { locationId = ViewBag.Location.Id})
+</div>

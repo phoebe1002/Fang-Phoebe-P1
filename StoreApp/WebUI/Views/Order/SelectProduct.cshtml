@@ -1,17 +1,16 @@
 @model IEnumerable<WebUI.Models.InventoryVM>
 @{
-    ViewData["Title"] = "ReplenishList";
+    ViewData["Title"] = "SelectProduct";
 }
 
-<h2>Branch: @ViewBag.Location.Name </h2>
-<h4>Address: @ViewBag.Location.Address</h4>
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+<h4>Your Store: @ViewBag.Location.Name</h4>
 <hr />
 <br>
-<h3>List of Inventories</h3>
+<h3>Products:</h3>
 
 <p>
-    &#128269;Can't find the Inventory. &#128073;
-    @Html.ActionLink("Add New One", "UnclaimedList", "Product", new { locationId = ViewBag.Location.Id})
+    @Html.ActionLink("View Cart", "Checkout", "Order", new { locationId = ViewBag.Location.Id, customerId = ViewBag.Customer.Id})
 </p>
 
 <table class="table">
@@ -48,13 +47,18 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.ActionLink("Edit Inventory", "Edit", "Inventory", new { id = item.Id })
+                @Html.ActionLink("Select", "AddToCart", "Order", new {customerId = ViewBag.Customer.Id, 
+                                                                    locationId = ViewBag.Location.Id, 
+                                                                    inventoryId = item.Id,
+                                                                    productId = item.Product.Id
+                                                                    })
             </td>
         </tr>
 }
     </tbody>
 </table>
 
+
 <div>
-    @Html.ActionLink("Back to Main", "Main", "Location", new { locationId = ViewBag.Location.Id})
+    @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
 </div>

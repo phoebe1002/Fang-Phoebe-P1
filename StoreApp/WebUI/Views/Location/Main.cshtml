@@ -1,10 +1,12 @@
 @model IEnumerable<WebUI.Models.LocationVM>
 @{
-    ViewData["Title"] = "Option";
+    ViewData["Title"] = "Main";
 }
 
-<h1>Branch: @ViewBag.Location.Name </h1>
+<h2>Branch: @ViewBag.Location.Name </h2>
 <h4>Address: @ViewBag.Location.Address</h4>
+<hr />
+<br>
 
 <div>
     @Html.ActionLink("Manage Product", "UnclaimedList", "Product", new { locationId = ViewBag.Location.Id})

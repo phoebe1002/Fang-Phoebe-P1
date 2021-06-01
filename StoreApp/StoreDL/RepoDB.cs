@@ -79,6 +79,26 @@ namespace StoreDL
             _context.SaveChanges();
             return inventory;
         }
+        public Inventory UpdateInventory(Inventory inventory)
+        {
+            _context.Inventories.Update(inventory);
+            _context.SaveChanges();
+            return inventory;
+        }
+
+        public Inventory GetInventoryById(int id)
+        {   
+            return _context.Inventories.Find(id);
+        }
+        public List<Inventory> GetInventories(Location location)
+        {
+            return _context.Inventories
+            .Where(
+                inventory => inventory.LocationId == GetLocation(location).Id
+            ).Select(
+                Inventory => Inventory
+            ).ToList();
+        }
 
         public Dictionary<Product, Inventory> GetProductWithInventory(Location location)
         {
@@ -91,17 +111,7 @@ namespace StoreDL
                         Product = _context.Products.FirstOrDefault(obj => obj.Id == inventory.ProductId)
                     })
                 .ToList()
-                .ToDictionary(i => i.Product);
-        }
-
-        public List<Inventory> GetInventories(Location location)
-        {
-            return _context.Inventories
-            .Where(
-                inventory => inventory.LocationId == GetLocation(location).Id
-            ).Select(
-                Inventory => Inventory
-            ).ToList();
+                .ToDictionary(key => key.Product);
         }
 
         public List<Customer> GetAllCustomers()
@@ -144,7 +154,7 @@ namespace StoreDL
             return customer;
         }
 
-        public Order AdddOrder(Customer customer, Location location, Order order)
+        public Order AddOrder(Customer customer, Location location, Order order)
         {
             _context.Orders.Add(
                 new Order
@@ -158,9 +168,31 @@ namespace StoreDL
             _context.SaveChanges();
             return order;
         }
+
+        public Order AddOrder(Order order)
+        {
+            _context.Orders.Add(
+                new Order
+                {
+                    OrderDate = order.OrderDate,
+                    Total = order.Total,
+                    CustomerId = order.CustomerId,
+                    LocationId = order.LocationId
+                }
+            );
+            
+            _context.SaveChanges();
+            return order;
+        }
+
         public Order GetOrder(Order order)
         {
-            Order found = _context.Orders.FirstOrDefault(obj => obj == order);
+            Order found = _context.Orders.FirstOrDefault(o => 
+                o.CustomerId == order.CustomerId &&
+                o.LocationId == order.LocationId &&
+                o.OrderDate == order.OrderDate &&
+                o.Total == order.Total
+            );
             if (found == null) return null;
             return new Order(found.Id, found.OrderDate, found.Total);
         }
@@ -188,6 +220,20 @@ namespace StoreDL
             _context.SaveChanges();
             return item;
         }
+
+        public Item AddItem(Item item)
+        {
+            _context.Items.Add(
+                new Item
+                {
+                    Quantity = item.Quantity,
+                    ProductId = item.ProductId,
+                    OrderId = item.OrderId
+                }
+            );
+            _context.SaveChanges();
+            return item;
+        }
         public List<Item> GetAllItems(Order order)
         {
             return _context.Items
@@ -196,6 +242,94 @@ namespace StoreDL
             ).Select(
                 item => item
             ).ToList();
+        }
+
+        public Cart GetCartItem(int id)
+        {
+            return _context.Cart.Find(id);
+        }
+        
+        public Cart GetCartItemByInventoryId(int inventoryId)
+        {
+            return _context.Cart.FirstOrDefault(c => c.InventoryId == inventoryId);
+        }
+        public List<Cart> GetAllCartItems(int customerId)
+        {
+            return _context.Cart
+            .Where(
+                item => item.CustomerId == GetCustomerById(customerId).Id
+            ).Select(
+                cart => new Cart{
+                    Id = cart.Id,
+                    LocationId = cart.LocationId,
+                    CustomerId = cart.CustomerId,
+                    InventoryId = cart.InventoryId,
+                    ProductId = cart.ProductId,
+                    Quantity = cart.Quantity,
+                    Price = cart.Price,
+                    Name = cart.Name
+                }
+            ).ToList();
+        }
+        public Cart UpdateCartItem(Cart cart)
+        {
+            _context.Cart.Update(cart);
+            _context.SaveChanges();
+            return cart;
+        }
+        public Cart AddToCart(Cart cart)
+        {
+            _context.Cart.Add(
+                new Cart
+                {
+                    LocationId = cart.LocationId,
+                    CustomerId = cart.CustomerId,
+                    InventoryId = cart.InventoryId,
+                    ProductId = cart.ProductId,
+                    Quantity = cart.Quantity,
+                    Price = cart.Price,
+                    Name = cart.Name
+                }
+            );
+            _context.SaveChanges();
+            return cart;
+        }
+
+        public Cart DeleteCartItem(Cart cart)
+        {
+            Cart itemToBeDelete = _context.Cart.First(i => i.Id == cart.Id);
+            _context.Cart.Remove(itemToBeDelete);
+            _context.SaveChanges();
+            return cart;
+        }
+
+        public void DeleteCart(int customerId)
+        {
+            List<Cart> cartItems = GetAllCartItems(customerId);
+            foreach(Cart i in cartItems)
+            {
+                if (i.CustomerId == customerId)
+                {
+                    DeleteCartItem(i);
+                }
+            }
+        }
+        public void AddToCart(Customer customer, Location location, Inventory inventory, Product product, Item item)
+        {
+            Product p = GetProductById(product.Id);
+            _context.Cart.Add(
+                new Cart
+                {
+                    LocationId = GetLocationById(location.Id).Id,
+                    CustomerId = GetCustomerById(customer.Id).Id,
+                    InventoryId = GetInventoryById(inventory.Id).Id,
+                    ProductId = p.Id,
+                    Quantity = item.Quantity,
+                    Price = p.Price,
+                    Name = p.Name
+                }
+            );
+            _context.SaveChanges();
         }
     }
 }

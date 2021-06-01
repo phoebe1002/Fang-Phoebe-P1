@@ -11,9 +11,11 @@ namespace WebUI.Controllers
     public class CustomerController : Controller
     {
         private ICustomerBL _customerBL;
-        public CustomerController(ICustomerBL customerBL)
+        private ILocationBL _locationBL;
+        public CustomerController(ICustomerBL customerBL, ILocationBL locationBL)
         {
             _customerBL = customerBL;
+            _locationBL = locationBL;
         }
         public ActionResult Index()
         {
@@ -30,6 +32,14 @@ namespace WebUI.Controllers
                 .ToList()
                 );
         }
+
+        public ActionResult Main(int customerId)
+        {
+            ViewBag.Location = _locationBL.GetLocationById(1);
+            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
+            return View();
+        }
+
 
         // GET: CustomerController/Create
         public ActionResult Create()

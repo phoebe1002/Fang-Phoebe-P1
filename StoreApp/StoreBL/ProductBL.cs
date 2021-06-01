@@ -41,7 +41,7 @@ namespace StoreBL
             return _repo.GetAllProducts();
         }
 
-        public List<Product> GetAvailableProducts(Location location)
+        public List<Product> GetUnclaimedProducts(Location location)
         {
             List<Product> products = _repo.GetAllProducts();
             List<Product> availableProducts = new List<Product>();
@@ -60,17 +60,5 @@ namespace StoreBL
         {
             return _repo.GetProductWithInventory(location);
         }
-
-        // public Product GetProductById(int id)
-        // {
-        //     return _repo.GetProductById(id);
-        // }
-
-        // public HashSet<Item> GetAvaliableProducts(Location location)
-        // {
-        //     HashSet<Item> inventories = _repo.GetAllInventories(location);
-        //     return inventories.Where(o => o.Quantity > 0).ToHashSet();
-        // }
-
     }
 }

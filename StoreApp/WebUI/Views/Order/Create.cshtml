@@ -1,4 +1,4 @@
-@model WebUI.Models.InventoryVM
+@model WebUI.Models.OrderVM
 
 @{
     ViewData["Title"] = "Create";
@@ -9,30 +9,31 @@
 <hr />
 <br>
 <h3>Product Details</h3>
-<h4>Name: @ViewBag.Product.Name</h4>
-<h4>Price: @ViewBag.Product.Price</h4>
+@* <h4>Name: @ViewBag.Product.Name</h4>
+<h4>Price: @ViewBag.Product.Price</h4> *@
 
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            @* <div class="form-group">
                 <label asp-for="Quantity" class="control-label"></label>
                 <input asp-for="Quantity" class="form-control" />
                 <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="LocationId" value=@Model.LocationId/>
-            <input type="hidden" asp-for="ProductId" value=@Model.ProductId/>
+            </div> *@
+
+            <input type="hidden" asp-for="LocationId" value=@ViewBag.Location.Id/>
+            <input type="hidden" asp-for="CustomerId" value=@ViewBag.Customer.Id/>
+            
             <div class="form-group">
                 <input type="submit" value="Add" class="btn btn-primary" />
-
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    @Html.ActionLink("Cancel", "UnclaimedList", "Product", new { locationId = ViewBag.Location.Id})
+    @Html.ActionLink("Back to Main", "Option", "Location", new { locationId = ViewBag.Location.Id})
 </div>
 
 @section Scripts {

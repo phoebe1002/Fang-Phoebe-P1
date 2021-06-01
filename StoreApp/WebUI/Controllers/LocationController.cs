@@ -26,7 +26,7 @@ namespace WebUI.Controllers
             );
         }
         
-        public ActionResult Option(int locationId)
+        public ActionResult Main(int locationId)
         {
             ViewBag.Location = _locationBL.GetLocationById(locationId);
             return View();

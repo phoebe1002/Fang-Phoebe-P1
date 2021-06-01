@@ -42,9 +42,7 @@
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>
             <td>
-                @* @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | *@
-                @Html.ActionLink("Manage Inventory", "Index", "Review", new { id = item.Id }) |
-                @Html.ActionLink("View Order History", "Index", "Review", new { id = item.Id }) |
+                @Html.ActionLink("Select", "Main", new { customerId = item.Id })
             </td>
         </tr>
 }

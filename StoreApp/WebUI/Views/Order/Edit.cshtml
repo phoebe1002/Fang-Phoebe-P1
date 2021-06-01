@@ -1,11 +1,11 @@
-@model WebUI.Models.InventoryVM
+@model WebUI.Models.CartVM
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Branch: @ViewBag.Location.Name </h1>
-<h4>Address: @ViewBag.Location.Address</h4>
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+<h4>Your Store: @ViewBag.Location.Name</h4>
 <hr />
 <br>
 <h3>Product Details</h3>
@@ -22,8 +22,12 @@
                 <span asp-validation-for="Quantity" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="Id" value=@Model.Id/>
-            <input type="hidden" asp-for="LocationId" value=@Model.LocationId/> 
-            <input type="hidden" asp-for="ProductId" value=@Model.ProductId/>
+            <input type="hidden" asp-for="LocationId" value=@ViewBag.Location.Id/>
+            <input type="hidden" asp-for="CustomerId" value=@ViewBag.Customer.Id/>
+            <input type="hidden" asp-for="InventoryId" value=@ViewBag.Inventory.Id/>
+            <input type="hidden" asp-for="ProductId" value=@ViewBag.Product.Id/>
+            <input type="hidden" asp-for="Name" value=@ViewBag.Product.Name/>
+            <input type="hidden" asp-for="Price" value=@ViewBag.Product.Price/>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -32,7 +36,7 @@
 </div>
 
 <div>
-    @Html.ActionLink("Cancel", "ReplenishList", "Inventory", new { locationId = ViewBag.Location.Id})
+    @Html.ActionLink("Back to Main", "Option", "Location", new { locationId = ViewBag.Location.Id})
 </div>
 
 @section Scripts {

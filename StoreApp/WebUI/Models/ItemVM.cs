@@ -27,6 +27,10 @@ namespace WebUI.Models
         public int ProductId { get; set; }
         public int OrderId { get; set; }
 
+        public int InventoryId { get; set; }
+        public int CustomerId { get; set; }
+        public int LocationId { get; set; }
         public Product Product { get; set; }
+
     }
 }

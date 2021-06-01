@@ -19,6 +19,12 @@ namespace StoreBL
         {
             return _repo.GetCustomer(customer);
         }
+
+        public Customer GetCustomerById(int id)
+        {
+            return _repo.GetCustomerById(id);
+        }
+
         public Customer AddCustomer(Customer customer)
         {
             //ToDo - check if the customer already in the system

@@ -1,4 +1,4 @@
-@model IEnumerable<WebUI.Models.LocationVM>
+@model IEnumerable<WebUI.Models.OrderVM>
 @{
     ViewData["Title"] = "Index";
 }
@@ -15,12 +15,8 @@
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Total)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -30,10 +26,7 @@
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => item.Total)
             </td>
             <td>
                 @* @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | *@

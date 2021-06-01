@@ -17,6 +17,8 @@ namespace StoreDL
         // Customer DeleteLocation(Location location);
         
         Inventory AddInventory(Location location, Product product, Inventory inventory);
+        Inventory UpdateInventory(Inventory inventory);
+        Inventory GetInventoryById(int id);
         List<Inventory> GetInventories(Location location);
         Dictionary<Product, Inventory> GetProductWithInventory(Location location);
       
@@ -27,12 +29,21 @@ namespace StoreDL
         Customer UpdateCustomer(Customer customer);
         Customer DeleteCustomer(Customer customer);
 
-        Order AdddOrder(Customer customer, Location location, Order order);
-        public Order GetOrder(Order order);
-        List<Order> GetAllOrders(Customer customer);
+        Order AddOrder(Customer customer, Location location, Order order);
+        Order AddOrder(Order order);
+        Order GetOrder(Order order);
 
         Item AddItem(Order order, Product product, Item item);
         List<Item> GetAllItems(Order order);
 
+        void AddToCart(Customer customer, Location location, Inventory inventory, Product product, Item item);
+        Cart AddToCart(Cart cart);
+        Cart GetCartItem(int id);
+        Cart GetCartItemByInventoryId(int inventoryId);
+        List<Cart> GetAllCartItems(int customerId);
+        Cart UpdateCartItem(Cart cart);
+        Cart DeleteCartItem(Cart cart);
+        Item AddItem(Item item);
+        void DeleteCart(int customerId);
     }
 }

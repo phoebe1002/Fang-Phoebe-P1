@@ -41,6 +41,13 @@ namespace WebUI
             services.AddScoped<ILocationBL, LocationBL>();
             services.AddScoped<IProductBL, ProductBL>();
             services.AddScoped<IInventoryBL, InventoryBL>();
+            services.AddScoped<IOrderBL, OrderBL>();
+            // Add MVC services to the services container.
+            // services.AddMvc();
+            // services.AddCaching(); // Adds a default in-memory implementation of IDistributedCache
+            services.AddSession(options =>{
+                options.IdleTimeout = TimeSpan.FromMinutes(15);
+            });
         }
         // This method parse postgreSQL connection string from the appsettings.json
         public static string parseElephantSQLURL(string uriString)
@@ -74,6 +81,8 @@ namespace WebUI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

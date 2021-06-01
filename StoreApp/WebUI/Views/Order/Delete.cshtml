@@ -1,0 +1,44 @@
+﻿@model WebUI.Models.CartVM
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+<h4>Your Store: @ViewBag.Location.Name</h4>
+<hr />
+<br>
+
+<h3>Are you sure you want to remove this Item?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>
+
+<hr />
+<div>
+    @Html.ActionLink("Cancel", "CartItems", "Order", new { locationId = ViewBag.Location.Id, customerId = ViewBag.Customer.Id})
+</div>

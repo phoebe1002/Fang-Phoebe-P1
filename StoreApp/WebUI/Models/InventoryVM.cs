@@ -29,7 +29,7 @@ namespace WebUI.Models
         public int Id { get; set; }
 
         [Required]
-        [Range(0, 100)]
+        [Range(1, 100)]
         public int Quantity { get; set; }
 
         public int ProductId { get; set; }

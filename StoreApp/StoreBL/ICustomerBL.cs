@@ -8,6 +8,7 @@ namespace StoreBL
     {
         List<Customer> GetAllCustomers(); 
         Customer GetCustomer(Customer customer);
+        Customer GetCustomerById(int id);
         Customer AddCustomer(Customer customer);
     }
 }

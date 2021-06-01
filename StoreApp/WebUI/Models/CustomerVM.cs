@@ -38,6 +38,16 @@ namespace WebUI.Models
         [DisplayName("Phone Number")]
         public string PhoneNumber { get; set; }
 
+
         //public string Email { get; set; }
+
+        public string FullName
+        {
+            get 
+            {
+                if (MiddleName == "") return $"{FirstName} {LastName}";
+                return $"{FirstName} {MiddleName} {LastName}";
+            }
+        }
     }
 }

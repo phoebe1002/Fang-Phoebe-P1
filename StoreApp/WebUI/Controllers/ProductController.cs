@@ -27,7 +27,7 @@ namespace WebUI.Controllers
             ViewBag.Location = _locationBL.GetLocationById(locationId);
 
             return View(_productBL
-            .GetAvailableProducts(_locationBL.GetLocationById(locationId))
+            .GetUnclaimedProducts(_locationBL.GetLocationById(locationId))
             .Select(prod => new ProductVM(prod))
             .ToList()
             );

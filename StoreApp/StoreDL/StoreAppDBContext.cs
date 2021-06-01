@@ -21,6 +21,8 @@ namespace StoreDL
         public DbSet<Order> Orders { get; set; }
         public DbSet<Item> Items { get; set; }
 
+        public DbSet<Cart> Cart { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            modelBuilder.Entity<Location>()
@@ -39,12 +41,17 @@ namespace StoreDL
            .Property(customer => customer.Id)
            .ValueGeneratedOnAdd();
 
+
            modelBuilder.Entity<Order>()
            .Property(order => order.Id)
            .ValueGeneratedOnAdd();
 
            modelBuilder.Entity<Item>()
            .Property(item => item.Id)
+           .ValueGeneratedOnAdd();
+
+           modelBuilder.Entity<Cart>()
+           .Property(cart => cart.Id)
            .ValueGeneratedOnAdd();
         }
     }
