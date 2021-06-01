@@ -14,13 +14,6 @@ variables:
   buildConfiguration: 'Release'
  
 steps:
-  - task: SonarCloudPrepare@1
-    inputs:
-      SonarCloud: 'Sonar Cloud'
-      organization: '210503-reston-net'
-      scannerMode: 'MSBuild'
-      projectKey: '210503-Reston-NET_Fang-Phoebe-P1'
-      projectName: 'Fang-Phoebe-P1'
       
   - task: DotNetCoreCLI@2
     displayName: Restore
@@ -45,11 +38,6 @@ steps:
     inputs:
       codeCoverageTool: 'Cobertura'
       summaryFileLocation: '**/Cobertura/coverage.xml'
-      
-  - task: SonarCloudPublish@1
-    displayName: Run Code Analysis
-  - task: SonarCloudPublish@1
-    displayName: Publish Code Analysis
  
   - task: DotNetCoreCLI@2
     displayName: Publish
