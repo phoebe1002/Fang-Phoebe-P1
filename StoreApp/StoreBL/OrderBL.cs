@@ -100,5 +100,44 @@ namespace StoreBL
             _repo.DeleteCart(customerId);
             return order.Id;
         }
+
+        public List<Order> GetAllOrdersByCustomer(int customerId)
+        {
+            return _repo.GetAllOrdersByCustomer(customerId);
+        }
+
+        public List<Item> GetOrderItemByOrderId(int orderId)
+        {
+            return _repo.GetOrderItemByOrderId(orderId);
+        }
+
+        public List<Order> GetAllOrderByCustomer(int customerId, string sortingCode)
+        {
+            List<Order> result =  _repo.GetAllOrdersByCustomer(customerId);
+            switch(sortingCode)
+            {
+                case "0" :
+                    result.Sort(delegate(Order a, Order b) {
+                        return a.Total.CompareTo(b.Total);
+                    });
+                    break;
+                case "1" :
+                    result.Sort(delegate(Order a, Order b) {
+                        return b.Total.CompareTo(a.Total);
+                    });
+                    break;
+                case "2" :
+                    result.Sort(delegate(Order a, Order b) {
+                        return a.OrderDate.CompareTo(b.OrderDate);
+                    });
+                    break;
+                case "3" :
+                    result.Sort(delegate(Order a, Order b) {
+                        return b.OrderDate.CompareTo(a.OrderDate);
+                    });
+                    break;
+            }
+            return result;
+        }
     }
 }

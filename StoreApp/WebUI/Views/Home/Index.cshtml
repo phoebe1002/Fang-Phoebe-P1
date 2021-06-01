@@ -3,6 +3,23 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @* <h3 class="display-4">Welcome To</h3>
+    <h3 class="display-4">BBT Store</h3> *@
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/000/667/234/small/bubble-tea-and-green-tea-icon.jpg" alt="bbt">
+    <br>
+    <div>
+        @Html.ActionLink("Sign In", "Search", "Customer")
+    </div>
+
+    <br>
+    <div>
+        @Html.ActionLink("Sign up", "Create", "Customer")
+    </div>
+
+    <br>
+    <div>
+        @Html.ActionLink("Admin", "Index", "Location")
+    </div>
+
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
 </div>

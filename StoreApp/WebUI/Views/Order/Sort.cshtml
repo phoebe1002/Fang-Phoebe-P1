@@ -1,0 +1,43 @@
+@model IEnumerable<WebUI.Models.CartVM>
+@{
+    ViewData["Title"] = "Sort";
+}
+<div class="text-center">
+    @* <h4>Hey @ViewBag.Customer.FirstName, please choose the sorting option:</h4>  *@
+
+    <h6>Sort by Date</h6>
+    <hr/>
+
+    <br>
+    <div>
+        @Html.ActionLink("Ascending", "History", "Order", new { customerId = ViewBag.Customer.Id, sortingCode = "2"})
+    </div>
+
+    <br>
+    <div>
+        @Html.ActionLink("Descending", "History", "Order", new { customerId = ViewBag.Customer.Id, sortingCode = "3"})
+    </div>
+    <br>
+    
+    <br>
+    <h6>Sort by Cost</h6>
+    <hr/>
+
+    <br>
+    <div>
+        @Html.ActionLink("Ascending", "History", "Order", new { customerId = ViewBag.Customer.Id, sortingCode = "0"})    
+    </div>
+
+    <br>
+    <div>
+        @Html.ActionLink("Descending", "History", "Order", new { customerId = ViewBag.Customer.Id, sortingCode = "1"})
+    </div>
+    <br>
+
+    <br>
+    <div>
+        @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
+    </div>
+
+</div>
+

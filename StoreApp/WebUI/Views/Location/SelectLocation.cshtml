@@ -1,14 +1,13 @@
 @model IEnumerable<WebUI.Models.LocationVM>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "SelectLocation";
 }
 
-
-<h1>Branch Locations</h1>
-
-<p>
-    <a asp-action="Create">Create New Location</a>
-</p>
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+<hr />
+<br>
+<h3>Select a store location</h3>
+<br>
 <table class="table">
     <thead>
         <tr>
@@ -37,11 +36,7 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                @* @Html.ActionLink("Edit", "Edit", new { id = item.Id }) | *@
-                @* @Html.ActionLink("Manage Product", "UnclaimedList", "Product", new { locationId = item.Id}) | *@
-                @* @Html.ActionLink("Manage Inventory", "ReplenishList", "Inventory", new { locationId = item.Id}) | *@
-                @* @Html.ActionLink("View Order History", "Index", "Review", new { id = item.Id }) | *@
-                @Html.ActionLink("Select", "Main", new { locationId = item.Id })
+                @Html.ActionLink("Select", "SelectProduct", "Order", new { customerId = ViewBag.Customer.Id, locationId = item.Id})
             </td>
         </tr>
 }
@@ -49,6 +44,5 @@
 </table>
 
 <div>
-    @Html.ActionLink("Sign Off", "Index", "Home")
+    @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
 </div>
-

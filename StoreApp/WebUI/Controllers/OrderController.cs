@@ -8,6 +8,7 @@ using WebUI.Models;
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebUI.Controllers
 {
@@ -44,6 +45,51 @@ namespace WebUI.Controllers
                 .ToList()
             );
         }
+
+        public ActionResult Sort(int customerId)
+        {
+            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
+            return View();
+        }
+
+        public ActionResult History(int customerId, string sortingCode)
+        {
+            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
+            return View(_orderBL
+                .GetAllOrderByCustomer(customerId, sortingCode)
+                .Select(
+                    order => new OrderVM()
+                    {
+                        Id = order.Id,
+                        OrderDate = order.OrderDate,
+                        Total = order.Total,
+                        Location = _locationBL.GetLocationById(order.LocationId)
+                    }
+                )
+                .ToList()
+            );
+        }
+
+        public ActionResult Detail(int customerId, int orderId, int locationId, decimal total)
+        {
+            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
+            ViewBag.Location = _locationBL.GetLocationById(locationId);
+            ViewBag.Total = total;
+            return View(_orderBL
+                .GetOrderItemByOrderId(orderId)
+                .Select(
+                    item => new ItemVM()
+                    {
+                        Id = item.Id,
+                        Quantity = item.Quantity,
+                        Product = _productBL.GetProductById(item.ProductId),
+                        Amount = item.Quantity * _productBL.GetProductById(item.ProductId).Price
+                    }
+                )
+                .ToList()
+            );
+        }
+
 
         public ActionResult Start(int locationId, int customerId)
         {
@@ -102,10 +148,11 @@ namespace WebUI.Controllers
             }
         }
 
-        public ActionResult Checkout(int locationId, int customerId)
+        public ActionResult Checkout(int locationId, int customerId, string message)
         {
             ViewBag.Customer = _customerBL.GetCustomerById(customerId);
             ViewBag.Location = _locationBL.GetLocationById(locationId);
+            ViewBag.Message = message;
 
             Tuple<List<Cart>, decimal> result = _orderBL.GetAllCartItems(customerId);
             if (result.Item1.Count > 0 )
@@ -136,19 +183,27 @@ namespace WebUI.Controllers
 
         public ActionResult Main(int customerId, int locationId)
         {
-            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
-            ViewBag.Location = _locationBL.GetLocationById(locationId);
-            Tuple<List<Cart>, decimal> result = _orderBL.GetAllCartItems(customerId);
-            int proceed = _orderBL.ProcessOrder(customerId);
-            if (result.Item1.Count < 0 )
+            string message = "Can't place order. Your cart is empty";
+            try
             {
-                ViewData.Add("Message", "Your cart is empty");
+                ViewBag.Customer = _customerBL.GetCustomerById(customerId);
+                ViewBag.Location = _locationBL.GetLocationById(locationId);
+                Tuple<List<Cart>, decimal> result = _orderBL.GetAllCartItems(customerId);
+                if (result.Item1.Count > 0 )
+                {
+                    int proceed = _orderBL.ProcessOrder(customerId);
+                    ViewData.Add("Message", "Your order has been placed!");
+                    return View();
+                }
+                //ViewData.Add("Message", "Your cart is empty");
+                
+                return RedirectToAction(nameof(Checkout), new {locationId = locationId, customerId = customerId, message = message});
             }
-            else if (proceed != -1)
+            catch
             {
-                ViewData.Add("Message", "Your order has been placed!");
+                return RedirectToAction(nameof(Checkout), new {locationId = locationId, customerId = customerId, message = message});
             }
-            return View();
+
         }
 
         public ActionResult Edit(int id)
@@ -164,6 +219,7 @@ namespace WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(CartVM cart)
         {
+            string message = "";
             try{
                 if (ModelState.IsValid)
                 {
@@ -180,7 +236,8 @@ namespace WebUI.Controllers
                             Name = cart.Name
                         }
                     );
-                    return RedirectToAction(nameof(Checkout), new {locationId = cart.LocationId, customerId = cart.CustomerId});
+                    message = cart.Name + " is updated";
+                    return RedirectToAction(nameof(Checkout), new {locationId = cart.LocationId, customerId = cart.CustomerId, message = message});
                 }
                 return View();
             }
@@ -238,10 +295,12 @@ namespace WebUI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {{}
+            string message = "";
             try
             {
                 Cart cart = _orderBL.DeleteCartItem(_orderBL.GetCartItem(id));
-                return RedirectToAction(nameof(Checkout), new {locationId = cart.LocationId, customerId = cart.CustomerId});
+                message = cart.Name + " is removed";
+                return RedirectToAction(nameof(Checkout), new {locationId = cart.LocationId, customerId = cart.CustomerId, message = message});
             }
             catch
             {

@@ -28,13 +28,17 @@ namespace StoreDL
         Customer AddCustomer(Customer Customer);
         Customer UpdateCustomer(Customer customer);
         Customer DeleteCustomer(Customer customer);
+        Customer GetCustomerByPhone(string phone);
 
         Order AddOrder(Customer customer, Location location, Order order);
         Order AddOrder(Order order);
         Order GetOrder(Order order);
+        
+        List<Order> GetAllOrdersByCustomer(int customerId);
 
         Item AddItem(Order order, Product product, Item item);
         List<Item> GetAllItems(Order order);
+        List<Item> GetOrderItemByOrderId(int orderId);
 
         void AddToCart(Customer customer, Location location, Inventory inventory, Product product, Item item);
         Cart AddToCart(Cart cart);
@@ -45,5 +49,6 @@ namespace StoreDL
         Cart DeleteCartItem(Cart cart);
         Item AddItem(Item item);
         void DeleteCart(int customerId);
+
     }
 }

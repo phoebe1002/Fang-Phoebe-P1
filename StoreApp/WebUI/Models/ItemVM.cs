@@ -31,6 +31,7 @@ namespace WebUI.Models
         public int CustomerId { get; set; }
         public int LocationId { get; set; }
         public Product Product { get; set; }
+        public decimal Amount { get; set; }
 
     }
 }

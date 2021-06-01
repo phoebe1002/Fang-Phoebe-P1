@@ -35,11 +35,24 @@ namespace WebUI.Controllers
 
         public ActionResult Main(int customerId)
         {
-            ViewBag.Location = _locationBL.GetLocationById(1);
+            //ViewBag.Location = _locationBL.GetLocationById(1);
             ViewBag.Customer = _customerBL.GetCustomerById(customerId);
             return View();
         }
 
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        // POST: CustomerController/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Search(CustomerVM customerVM)
+        {
+            Customer customer = _customerBL.GetCustomerByPhone(customerVM.PhoneNumber);
+            return RedirectToAction(nameof(Main), new {customerId = customer.Id});
+        }
 
         // GET: CustomerController/Create
         public ActionResult Create()
@@ -56,15 +69,16 @@ namespace WebUI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _customerBL.AddCustomer(new Customer
+                    Customer current = new Customer
                     {
                         FirstName = customerVM.FirstName,
                         MiddleName = customerVM.MiddleName,
                         LastName = customerVM.LastName,
                         PhoneNumber = customerVM.PhoneNumber
-                    }
-                    );
-                    return RedirectToAction(nameof(Index));
+                    };
+                    _customerBL.AddCustomer(current);
+                    Customer customer = _customerBL.GetCustomer(current);
+                    return RedirectToAction(nameof(Main), new {customerId = customer.Id});
                 }
                 return View();
             }

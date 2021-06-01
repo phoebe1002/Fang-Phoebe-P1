@@ -2,14 +2,16 @@
 @{
     ViewData["Title"] = "Main";
 }
+<div class="text-center">
+    <h3> Hey @ViewBag.Customer.FirstName, @ViewData["Message"]</h3> 
 
-<h3> Hey @ViewBag.Customer.FirstName, @ViewData["Message"]</h3> 
-
-<br>
-<div>
-    @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
-</div>
-
-<div>
-    @Html.ActionLink("Continue Shopping", "SelectProduct", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id})
+    <br>
+    <div>
+        @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
+    </div>
+    
+    <br>
+    <div>
+        @Html.ActionLink("Continue Shopping", "SelectProduct", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id})
+    </div>
 </div>

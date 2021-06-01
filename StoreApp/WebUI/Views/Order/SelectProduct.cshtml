@@ -7,11 +7,13 @@
 <h4>Your Store: @ViewBag.Location.Name</h4>
 <hr />
 <br>
-<h3>Products:</h3>
+<h3>Select BBT you want to order</h3>
 
-<p>
-    @Html.ActionLink("View Cart", "Checkout", "Order", new { locationId = ViewBag.Location.Id, customerId = ViewBag.Customer.Id})
-</p>
+<div class="text-right">
+    <p>
+        @Html.ActionLink("View Cart", "Checkout", "Order", new { locationId = ViewBag.Location.Id, customerId = ViewBag.Customer.Id, message = ""})
+    </p>
+</div>
 
 <table class="table">
     <thead>
@@ -25,9 +27,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Product.Price)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Quantity)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
@@ -43,9 +45,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Product.Price)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
+            </td> *@
             <td>
                 @Html.ActionLink("Select", "AddToCart", "Order", new {customerId = ViewBag.Customer.Id, 
                                                                     locationId = ViewBag.Location.Id, 
@@ -57,7 +59,6 @@
 }
     </tbody>
 </table>
-
 
 <div>
     @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})

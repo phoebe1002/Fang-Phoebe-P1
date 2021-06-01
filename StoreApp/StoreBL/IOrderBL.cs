@@ -18,5 +18,9 @@ namespace StoreBL
         Cart UpdateCartItem(Cart cart);
         Cart DeleteCartItem(Cart cart);
         int ProcessOrder(int customerId);
+        List<Order> GetAllOrdersByCustomer(int customerId);
+        List<Item> GetOrderItemByOrderId(int orderId);
+        List<Order> GetAllOrderByCustomer(int customerId, string sortingCode);
     }
+    
 }

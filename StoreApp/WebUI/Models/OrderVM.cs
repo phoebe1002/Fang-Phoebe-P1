@@ -27,6 +27,7 @@ namespace WebUI.Models
         public int CustomerId { get; set; }
         public int LocationId { get; set; }
 
+        public Location Location { get; set; }
         public List<Inventory> Stock { get; set; }
     }
 }

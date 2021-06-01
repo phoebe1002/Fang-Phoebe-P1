@@ -132,6 +132,13 @@ namespace StoreDL
             return _context.Customers.Find(id);
         }
 
+        public Customer GetCustomerByPhone(string phone)
+        {
+            Customer found = _context.Customers.FirstOrDefault(obj => obj.PhoneNumber == phone);
+            if (found == null) return null;
+            return new Customer(found);
+        }
+
         public Customer AddCustomer(Customer customer)
         {
             _context.Customers.Add(
@@ -197,7 +204,7 @@ namespace StoreDL
             return new Order(found.Id, found.OrderDate, found.Total);
         }
 
-        public List<Order> GetAllOrders(Customer customer)
+        public List<Order> GetAllOrdersByCustomer(Customer customer)
         {
             return _context.Orders
             .Where(
@@ -206,7 +213,17 @@ namespace StoreDL
                 order => order
             ).ToList();
         }
-
+        
+        public List<Order> GetAllOrdersByCustomer(int customerId)
+        {
+            return _context.Orders
+            .Where(
+                order => order.CustomerId == customerId
+            ).Select(
+                order => order
+            ).ToList();
+        }
+        
         public Item AddItem(Order order, Product product, Item item)
         {
             _context.Items.Add(
@@ -239,6 +256,16 @@ namespace StoreDL
             return _context.Items
             .Where(
                 item => item.OrderId == GetOrder(order).Id
+            ).Select(
+                item => item
+            ).ToList();
+        }
+
+        public List<Item> GetOrderItemByOrderId(int orderId)
+        {
+            return _context.Items
+            .Where(
+                item => item.OrderId == orderId
             ).Select(
                 item => item
             ).ToList();
@@ -331,5 +358,6 @@ namespace StoreDL
             );
             _context.SaveChanges();
         }
+
     }
 }

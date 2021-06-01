@@ -1,6 +1,6 @@
-@model IEnumerable<WebUI.Models.CartVM>
+@model IEnumerable<WebUI.Models.ItemVM>
 @{
-    ViewData["Title"] = "Checkout";
+    ViewData["Title"] = "Detail";
     var customer = @ViewBag.Customer;
 }
 
@@ -9,16 +9,13 @@
 <hr />
 <br>
 <h3>Cart Details</h3>
-<h5>Total : @ViewData["Total"]</h5>
+<h5>Total : @ViewBag.Total</h5>
 
 <div class="text-right">
     <p>
-        @Html.ActionLink("Continue Shopping", "SelectProduct", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id})
+        @Html.ActionLink("Back to History", "History", "Order", new { customerId = ViewBag.Customer.Id})
     </p>
     <br>
-    <p>
-        @ViewBag.Message
-    </p>
 </div>
 
 <div>
@@ -29,16 +26,16 @@
                     @Html.DisplayNameFor(model => model.Id)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Name)
+                    @Html.DisplayNameFor(model => model.Product.Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Price)
+                    @Html.DisplayNameFor(model => model.Product.Price)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Quantity)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Total)
+                    @Html.DisplayNameFor(model => model.Amount)
                 </th>
                 <th></th>
             </tr>
@@ -50,30 +47,21 @@
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Product.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Price)
+                    @Html.DisplayFor(modelItem => item.Product.Price)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Quantity)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Total)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", "Order", new { id = item.Id }) |
-                    @Html.ActionLink("Remove", "Delete", "Order", new { id = item.Id })
+                    @Html.DisplayFor(modelItem => item.Amount)
                 </td>
             </tr>
     }
         </tbody>
     </table>
-</div>
-
-<br>
-<div>
-    @Html.ActionLink("Place the order", "Main", "Order", new { customerId = ViewBag.Customer.Id, locationId = ViewBag.Location.Id})
 </div>
 
 <br>

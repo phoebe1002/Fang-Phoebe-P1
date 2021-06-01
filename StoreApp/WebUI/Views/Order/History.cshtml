@@ -1,0 +1,66 @@
+@model IEnumerable<WebUI.Models.OrderVM>
+@{
+    ViewData["Title"] = "History";
+}
+
+<h2>Hello @ViewBag.Customer.FirstName</h2>
+@* <h4>Your Store: @ViewBag.Location.Name</h4> *@
+<hr />
+<br>
+<h3>Order Histories</h3>
+
+<div class="text-right">
+    <p>
+        @Html.ActionLink("Go back to option", "Sort", "Order", new { customerId = ViewBag.Customer.Id})
+    </p> 
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.Name)
+            </td>
+            <td>
+                @Html.ActionLink("View Details", "Detail", "Order", new { 
+                                                                    customerId = ViewBag.Customer.Id, 
+                                                                    orderId = item.Id,
+                                                                    locationId = item.Location.Id,
+                                                                    Total = item.Total
+                                                                    })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Back to Main", "Main", "Customer", new { customerId = ViewBag.Customer.Id})
+</div>

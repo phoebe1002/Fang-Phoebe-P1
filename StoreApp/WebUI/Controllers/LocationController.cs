@@ -12,13 +12,25 @@ namespace WebUI.Controllers
     public class LocationController : Controller
     {
         private ILocationBL _locationBL;
-        public LocationController(ILocationBL locationBL)
+        private ICustomerBL _customerBL;
+        public LocationController(ILocationBL locationBL, ICustomerBL customerBL)
         {
             _locationBL = locationBL;
+            _customerBL = customerBL;
         }
 
         public ActionResult Index()
         {
+            return View(_locationBL
+            .GetAllLocations()
+            .Select(location => new LocationVM(location))
+            .ToList()
+            );
+        }
+        
+        public ActionResult SelectLocation(int customerId)
+        {
+            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
             return View(_locationBL
             .GetAllLocations()
             .Select(location => new LocationVM(location))

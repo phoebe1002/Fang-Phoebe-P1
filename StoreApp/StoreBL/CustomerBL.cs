@@ -31,6 +31,10 @@ namespace StoreBL
             return _repo.AddCustomer(customer);
         }
         
+        public Customer GetCustomerByPhone(string phone)
+        {
+            return _repo.GetCustomerByPhone(phone);
+        }
     }
 
 

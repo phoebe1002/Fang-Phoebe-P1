@@ -24,6 +24,12 @@ namespace WebUI.Models
             LastName = customer.LastName;
             PhoneNumber = customer.PhoneNumber;
         }
+
+        public CustomerVM(string phone)
+        {
+            PhoneNumber = phone;
+        }
+        
         public int Id { get; set; }
 
         [Required]
