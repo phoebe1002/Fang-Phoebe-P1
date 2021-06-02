@@ -52,5 +52,5 @@ steps:
       ConnectionType: 'AzureRM'
       azureSubscription: 'Azure service'
       appType: 'webApp'
-      WebAppName: 'bbtApp'
+      WebAppName: 'bbtapps'
       packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
