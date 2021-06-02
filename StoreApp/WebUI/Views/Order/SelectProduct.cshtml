@@ -52,7 +52,8 @@
                 @Html.ActionLink("Select", "AddToCart", "Order", new {customerId = ViewBag.Customer.Id, 
                                                                     locationId = ViewBag.Location.Id, 
                                                                     inventoryId = item.Id,
-                                                                    productId = item.Product.Id
+                                                                    productId = item.Product.Id,
+                                                                    message = ""
                                                                     })
             </td>
         </tr>

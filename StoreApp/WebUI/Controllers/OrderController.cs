@@ -109,12 +109,14 @@ namespace WebUI.Controllers
             return View();
         }
 
-        public ActionResult AddToCart(int customerId, int locationId, int inventoryId, int productId, int id)
+        public ActionResult AddToCart(int customerId, int locationId, int inventoryId, int productId, int id, string message)
         {
             ViewBag.Customer = _customerBL.GetCustomerById(customerId);
             ViewBag.Location = _locationBL.GetLocationById(locationId);
             ViewBag.Inventory = _inventoryBL.GetInventoryById(inventoryId);
             ViewBag.Product = _productBL.GetProductById(productId);
+            ViewBag.Message = message;
+
             return View();
         }
 
@@ -126,6 +128,20 @@ namespace WebUI.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    string message = "";
+                    Inventory stock = _inventoryBL.GetInventoryById(cart.InventoryId);
+                    if (cart.Quantity > stock.Quantity)
+                    {
+                        message = $"Try again. We don't have {cart.Quantity} {cart.Name} in stock!";
+                        return RedirectToAction(nameof(AddToCart), new {locationId = cart.LocationId, 
+                                                                        customerId = cart.CustomerId,
+                                                                        inventoryId = cart.InventoryId,
+                                                                        productId = cart.ProductId,
+                                                                        id = cart.Id,
+                                                                        message = message
+                                                                        });
+
+                    }
                     _orderBL.AddToCart(
                         new Cart
                         {

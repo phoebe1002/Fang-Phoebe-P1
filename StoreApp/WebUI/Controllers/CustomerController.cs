@@ -55,8 +55,9 @@ namespace WebUI.Controllers
         }
 
         // GET: CustomerController/Create
-        public ActionResult Create()
+        public ActionResult Create(string message)
         {
+            ViewBag.Message = message;
             return View();
         }
 
@@ -69,6 +70,13 @@ namespace WebUI.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    string message = "";
+                    Customer exist = _customerBL.GetCustomerByPhone(customerVM.PhoneNumber);
+                    if (exist != null)
+                    {
+                        message ="Please try again. An account already exists";
+                        return RedirectToAction(nameof(Create), new {message = message});
+                    }
                     Customer current = new Customer
                     {
                         FirstName = customerVM.FirstName,
