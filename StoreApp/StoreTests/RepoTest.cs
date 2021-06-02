@@ -50,6 +50,28 @@ namespace StoreApp.StoreTests
         }
 
         [Fact]
+        public void UpdateInventory()
+        {
+            using (var context = new StoreAppDBContext(options))
+            {
+                IRepository _repo = new RepoDB(context);
+                var toUpdate = new Inventory
+                    {
+                        Id = 1,
+                        Quantity = 5,
+                        LocationId = 1,
+                        ProductId = 1
+                    };
+                _repo.UpdateInventory(toUpdate);
+                var result = _repo.GetInventoryById(1);
+
+                Assert.NotNull(result);
+                Assert.Equal(5, result.Quantity);
+            }
+        }
+
+
+        [Fact]
         public void GetLocationShouldReturnRightName()
         {
             using (var context = new StoreAppDBContext(options))
