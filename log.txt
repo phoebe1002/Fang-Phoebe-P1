@@ -1,0 +1,762 @@
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 219.6921ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 242.2754ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 380.7705ms
+Request starting HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/css/bootstrap.min.css - -
+Request starting HTTP/2 GET https://localhost:44360/css/site.css - -
+Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\css\site.css"'
+Request finished HTTP/2 GET https://localhost:44360/css/site.css - - - 200 1417 text/css 25.6863ms
+Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"'
+Request finished HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 95.9734ms
+Request starting HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+Request starting HTTP/2 GET https://localhost:44360/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+Request starting HTTP/2 GET https://localhost:44360/lib/jquery/dist/jquery.min.js - -
+Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\js\site.js"'
+Request finished HTTP/2 GET https://localhost:44360/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 6.0717ms
+Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"'
+Request finished HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 22.6312ms
+Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\jquery\dist\jquery.min.js"'
+Request finished HTTP/2 GET https://localhost:44360/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 28.4794ms
+Request starting HTTP/2 GET https://localhost:44360/favicon.ico - -
+Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\favicon.ico"'
+Request finished HTTP/2 GET https://localhost:44360/favicon.ico - - - 200 5430 image/x-icon 4.1136ms
+Request starting HTTP/2 GET https://localhost:44360/Home/Privacy - -
+Executing endpoint '"WebUI.Controllers.HomeController.Privacy (WebUI)"'
+Route matched with "{action = \"Privacy\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Privacy()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Privacy Page
+This Exception From Privacy Page
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at WebUI.Controllers.HomeController.Privacy() in C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\Controllers\HomeController.cs:line 32
+Executing ViewResult, running view "Privacy".
+Executed ViewResult - view "Privacy" executed in 4.635ms.
+Executed action "WebUI.Controllers.HomeController.Privacy (WebUI)" in 192.3643ms
+Executed endpoint '"WebUI.Controllers.HomeController.Privacy (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Home/Privacy - - - 200 - text/html;+charset=utf-8 200.2953ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Now listening on: "https://localhost:5001"
+Now listening on: "http://localhost:5000"
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Application is shutting down...
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Now listening on: "https://localhost:5001"
+Now listening on: "http://localhost:5000"
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Application is shutting down...
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Now listening on: "https://localhost:5001"
+Now listening on: "http://localhost:5000"
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Application is shutting down...
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Now listening on: "https://localhost:5001"
+Now listening on: "http://localhost:5000"
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Application is shutting down...
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Now listening on: "https://localhost:5001"
+Now listening on: "http://localhost:5000"
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Application is shutting down...
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 423.3095ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 464.9572ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 717.7007ms
+Request starting HTTP/2 GET https://localhost:44360/Customer - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c"
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 33.0025ms.
+Executed action "WebUI.Controllers.CustomerController.Index (WebUI)" in 11268.215ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer - - - 200 - text/html;+charset=utf-8 11282.1086ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Route matched with "{action = \"Main\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Main(Int32)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("26"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Main".
+Executed ViewResult - view "Main" executed in 34.1716ms.
+Executed action "WebUI.Controllers.CustomerController.Main (WebUI)" in 259.4854ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - - - 200 - text/html;+charset=utf-8 276.7800ms
+Request starting HTTP/2 GET https://localhost:44360/Location/SelectLocation?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.LocationController.SelectLocation (WebUI)"'
+Route matched with "{action = \"SelectLocation\", controller = \"Location\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult SelectLocation(Int32)" on controller "WebUI.Controllers.LocationController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("23"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l"
+Executing ViewResult, running view "SelectLocation".
+Executed ViewResult - view "SelectLocation" executed in 16.2346ms.
+Executed action "WebUI.Controllers.LocationController.SelectLocation (WebUI)" in 110.0504ms
+Executed endpoint '"WebUI.Controllers.LocationController.SelectLocation (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Location/SelectLocation?customerId=1 - - - 200 - text/html;+charset=utf-8 113.4132ms
+Request starting HTTP/2 GET https://localhost:44360/Order/SelectProduct?customerId=1&locationId=1 - -
+Executing endpoint '"WebUI.Controllers.OrderController.SelectProduct (WebUI)"'
+Route matched with "{action = \"SelectProduct\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult SelectProduct(Int32, Int32)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("26"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__GetCustomerById_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"LocationId\", c.\"CustomerId\", c.\"InventoryId\", c.\"ProductId\", c.\"Quantity\", c.\"Price\", c.\"Name\"
+FROM \"Cart\" AS c
+WHERE c.\"CustomerId\" = @__GetCustomerById_Id_0"
+Executed DbCommand ("22"ms) [Parameters=["@__location_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__location_Id_0
+LIMIT 1"
+Executed DbCommand ("28"ms) [Parameters=["@__GetLocation_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT i.\"Id\", i.\"LocationId\", i.\"ProductId\", i.\"Quantity\"
+FROM \"Inventories\" AS i
+WHERE i.\"LocationId\" = @__GetLocation_Id_0"
+Executed DbCommand ("22"ms) [Parameters=["@__inventoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CustomerId\", c.\"InventoryId\", c.\"LocationId\", c.\"Name\", c.\"Price\", c.\"ProductId\", c.\"Quantity\", c.\"TempId\"
+FROM \"Cart\" AS c
+WHERE c.\"InventoryId\" = @__inventoryId_0
+LIMIT 1"
+Executed DbCommand ("23"ms) [Parameters=["@__inventoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CustomerId\", c.\"InventoryId\", c.\"LocationId\", c.\"Name\", c.\"Price\", c.\"ProductId\", c.\"Quantity\", c.\"TempId\"
+FROM \"Cart\" AS c
+WHERE c.\"InventoryId\" = @__inventoryId_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__inventoryId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"CustomerId\", c.\"InventoryId\", c.\"LocationId\", c.\"Name\", c.\"Price\", c.\"ProductId\", c.\"Quantity\", c.\"TempId\"
+FROM \"Cart\" AS c
+WHERE c.\"InventoryId\" = @__inventoryId_0
+LIMIT 1"
+Executed DbCommand ("25"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"Description\", p.\"Name\", p.\"Price\"
+FROM \"Products\" AS p
+WHERE p.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"Description\", p.\"Name\", p.\"Price\"
+FROM \"Products\" AS p
+WHERE p.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("21"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"Description\", p.\"Name\", p.\"Price\"
+FROM \"Products\" AS p
+WHERE p.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "SelectProduct".
+Executed ViewResult - view "SelectProduct" executed in 28.2044ms.
+Executed action "WebUI.Controllers.OrderController.SelectProduct (WebUI)" in 393.5344ms
+Executed endpoint '"WebUI.Controllers.OrderController.SelectProduct (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/SelectProduct?customerId=1&locationId=1 - - - 200 - text/html;+charset=utf-8 396.5267ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Route matched with "{action = \"Main\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Main(Int32)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Main".
+Executed ViewResult - view "Main" executed in 3.0093ms.
+Executed action "WebUI.Controllers.CustomerController.Main (WebUI)" in 26.3264ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - - - 200 - text/html;+charset=utf-8 34.9800ms
+Request starting HTTP/2 GET https://localhost:44360/Order/Sort?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.OrderController.Sort (WebUI)"'
+Route matched with "{action = \"Sort\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Sort(Int32)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Sort".
+Executed ViewResult - view "Sort" executed in 6.15ms.
+Executed action "WebUI.Controllers.OrderController.Sort (WebUI)" in 30.4698ms
+Executed endpoint '"WebUI.Controllers.OrderController.Sort (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/Sort?customerId=1 - - - 200 - text/html;+charset=utf-8 36.3287ms
+Request starting HTTP/2 GET https://localhost:44360/Order/History?customerId=1&sortingCode=0 - -
+Executing endpoint '"WebUI.Controllers.OrderController.History (WebUI)"'
+Route matched with "{action = \"History\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult History(Int32, System.String)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("21"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"CustomerId\", o.\"LocationId\", o.\"OrderDate\", o.\"Total\"
+FROM \"Orders\" AS o
+WHERE o.\"CustomerId\" = @__customerId_0"
+Executed DbCommand ("21"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "History".
+Executed ViewResult - view "History" executed in 39.5677ms.
+Executed action "WebUI.Controllers.OrderController.History (WebUI)" in 142.6268ms
+Executed endpoint '"WebUI.Controllers.OrderController.History (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/History?customerId=1&sortingCode=0 - - - 200 - text/html;+charset=utf-8 144.8983ms
+Request starting HTTP/2 GET https://localhost:44360/Order/Detail?customerId=1&orderId=17&locationId=1&Total=2.99 - -
+Executing endpoint '"WebUI.Controllers.OrderController.Detail (WebUI)"'
+Route matched with "{action = \"Detail\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Detail(Int32, Int32, Int32, System.Decimal)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT i.\"Id\", i.\"OrderId\", i.\"ProductId\", i.\"Quantity\"
+FROM \"Items\" AS i
+WHERE i.\"OrderId\" = @__orderId_0"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"Description\", p.\"Name\", p.\"Price\"
+FROM \"Products\" AS p
+WHERE p.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Detail".
+Executed ViewResult - view "Detail" executed in 38.1368ms.
+Executed action "WebUI.Controllers.OrderController.Detail (WebUI)" in 155.1609ms
+Executed endpoint '"WebUI.Controllers.OrderController.Detail (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/Detail?customerId=1&orderId=17&locationId=1&Total=2.99 - - - 200 - text/html;+charset=utf-8 159.0258ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1&locationId=1 - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Route matched with "{action = \"Main\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Main(Int32)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("27"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Main".
+Executed ViewResult - view "Main" executed in 1.3213ms.
+Executed action "WebUI.Controllers.CustomerController.Main (WebUI)" in 30.4425ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1&locationId=1 - - - 200 - text/html;+charset=utf-8 31.3580ms
+Request starting HTTP/2 GET https://localhost:44360/Order/Sort?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.OrderController.Sort (WebUI)"'
+Route matched with "{action = \"Sort\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Sort(Int32)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Sort".
+Executed ViewResult - view "Sort" executed in 0.7581ms.
+Executed action "WebUI.Controllers.OrderController.Sort (WebUI)" in 24.7989ms
+Executed endpoint '"WebUI.Controllers.OrderController.Sort (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/Sort?customerId=1 - - - 200 - text/html;+charset=utf-8 26.0829ms
+Request starting HTTP/2 GET https://localhost:44360/Order/History?customerId=1&sortingCode=1 - -
+Executing endpoint '"WebUI.Controllers.OrderController.History (WebUI)"'
+Route matched with "{action = \"History\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult History(Int32, System.String)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"CustomerId\", o.\"LocationId\", o.\"OrderDate\", o.\"Total\"
+FROM \"Orders\" AS o
+WHERE o.\"CustomerId\" = @__customerId_0"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "History".
+Executed ViewResult - view "History" executed in 4.9272ms.
+Executed action "WebUI.Controllers.OrderController.History (WebUI)" in 74.7148ms
+Executed endpoint '"WebUI.Controllers.OrderController.History (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/History?customerId=1&sortingCode=1 - - - 200 - text/html;+charset=utf-8 75.4727ms
+Request starting HTTP/2 GET https://localhost:44360/Order/Detail?customerId=1&orderId=19&locationId=1&Total=4.49 - -
+Executing endpoint '"WebUI.Controllers.OrderController.Detail (WebUI)"'
+Route matched with "{action = \"Detail\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Detail(Int32, Int32, Int32, System.Decimal)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("25"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("21"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("21"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT i.\"Id\", i.\"OrderId\", i.\"ProductId\", i.\"Quantity\"
+FROM \"Items\" AS i
+WHERE i.\"OrderId\" = @__orderId_0"
+Executed DbCommand ("23"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"Description\", p.\"Name\", p.\"Price\"
+FROM \"Products\" AS p
+WHERE p.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("21"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT p.\"Id\", p.\"Description\", p.\"Name\", p.\"Price\"
+FROM \"Products\" AS p
+WHERE p.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Detail".
+Executed ViewResult - view "Detail" executed in 3.8597ms.
+Executed action "WebUI.Controllers.OrderController.Detail (WebUI)" in 124.4429ms
+Executed endpoint '"WebUI.Controllers.OrderController.Detail (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/Detail?customerId=1&orderId=19&locationId=1&Total=4.49 - - - 200 - text/html;+charset=utf-8 126.2529ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Now listening on: "https://localhost:5001"
+Now listening on: "http://localhost:5000"
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:5001/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 99.3504ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 111.6658ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 184.0069ms
+Request starting HTTP/2 GET https://localhost:5001/css/site.css - -
+Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - -
+Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\css\site.css"'
+Request finished HTTP/2 GET https://localhost:5001/css/site.css - - - 200 1417 text/css 8.0198ms
+Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"'
+Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 17.1993ms
+Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - -
+Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+Sending file. Request path: '"/js/site.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\js\site.js"'
+Request finished HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 0.5679ms
+Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"'
+Request finished HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 2.2450ms
+Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\jquery\dist\jquery.min.js"'
+Request finished HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 2.6002ms
+Request starting HTTP/2 GET https://localhost:5001/favicon.ico - -
+Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\favicon.ico"'
+Request finished HTTP/2 GET https://localhost:5001/favicon.ico - - - 200 5430 image/x-icon 1.1320ms
+Request starting HTTP/2 GET https://localhost:5001/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 31.6451ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 520.965ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:5001/Customer/Search - - - 200 - text/html;+charset=utf-8 525.9802ms
+Request starting HTTP/2 GET https://localhost:5001/lib/jquery-validation/dist/jquery.validate.min.js - -
+Request starting HTTP/2 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - -
+Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js"'
+Request finished HTTP/2 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - - - 200 5867 application/javascript 0.8348ms
+Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js"'
+Request finished HTTP/2 GET https://localhost:5001/lib/jquery-validation/dist/jquery.validate.min.js - - - 200 23261 application/javascript 1.2224ms
+Request starting HTTP/2 GET https://localhost:5001/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 0.6527ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 0.8112ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 1.4453ms
+Application is shutting down...
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 248.9124ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 280.449ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 438.5370ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 39.4832ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 270.1464ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 285.6505ms
+Request starting HTTP/2 GET https://localhost:44360/lib/jquery-validation/dist/jquery.validate.min.js - -
+Request starting HTTP/2 GET https://localhost:44360/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - -
+Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js"'
+Request finished HTTP/2 GET https://localhost:44360/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - - - 200 5867 application/javascript 30.5467ms
+Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.min.js"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js"'
+Request finished HTTP/2 GET https://localhost:44360/lib/jquery-validation/dist/jquery.validate.min.js - - - 200 23261 application/javascript 33.2827ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 393.1883ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 438.6415ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 651.6490ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 40.217ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 276.8889ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 329.1547ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 25.9744ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 30.4633ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 35.7264ms
+Request starting HTTP/2 GET https://localhost:44360/favicon.ico - -
+Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI\wwwroot\favicon.ico"'
+Request finished HTTP/2 GET https://localhost:44360/favicon.ico - - - 200 5430 image/x-icon 15.1710ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 2.2831ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 6.9076ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 8.4196ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 308.8755ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 419.1299ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 644.1687ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 55.3914ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 324.409ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 332.1791ms
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 1.2335ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 1.4603ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 2.3972ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Create - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Create (WebUI)"'
+Route matched with "{action = \"Create\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Create()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Create".
+Executed ViewResult - view "Create" executed in 20.7987ms.
+Executed action "WebUI.Controllers.CustomerController.Create (WebUI)" in 21.527ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Create (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Create - - - 200 - text/html;+charset=utf-8 29.9351ms
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 1.0305ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 1.156ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 2.1990ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 1.6849ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 4.0504ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 5.2234ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 289.3752ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 327.1078ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 504.7371ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 50.5809ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 353.1984ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 368.0181ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 321.0316ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 356.3032ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 547.8289ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 63.7373ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 1343.0813ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 1353.4414ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 396.7004ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 445.9493ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 665.1329ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 107.4923ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 738.0987ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 762.4168ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 394.0542ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 439.6982ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 675.6678ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 65.8948ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 421.2091ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 436.9732ms
+Application Starting Up
+User profile is available. Using '"C:\Users\jia52\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: "Development"
+Content root path: "C:\Revature\Fang-Phoebe-P1\StoreApp\WebUI"
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 357.5412ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 398.7787ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 587.8515ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Search - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search()" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Executing ViewResult, running view "Search".
+Executed ViewResult - view "Search" executed in 37.0979ms.
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 226.5663ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Search - - - 200 - text/html;+charset=utf-8 231.9822ms
+Request starting HTTP/2 POST https://localhost:44360/Customer/Search application/x-www-form-urlencoded 205
+Executing endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Route matched with "{action = \"Search\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Search(WebUI.Models.CustomerVM)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("28"ms) [Parameters=["@__phone_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"PhoneNumber\" = @__phone_0
+LIMIT 1"
+Executing RedirectResult, redirecting to "/Customer/Main?customerId=1".
+Executed action "WebUI.Controllers.CustomerController.Search (WebUI)" in 1797.6385ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Search (WebUI)"'
+Request finished HTTP/2 POST https://localhost:44360/Customer/Search application/x-www-form-urlencoded 205 - 302 - - 1821.8021ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Route matched with "{action = \"Main\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Main(Int32)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("24"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Main".
+Executed ViewResult - view "Main" executed in 24.7183ms.
+Executed action "WebUI.Controllers.CustomerController.Main (WebUI)" in 161.9367ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - - - 200 - text/html;+charset=utf-8 163.6313ms
+Request starting HTTP/2 GET https://localhost:44360/Location/SelectLocation?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.LocationController.SelectLocation (WebUI)"'
+Route matched with "{action = \"SelectLocation\", controller = \"Location\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult SelectLocation(Int32)" on controller "WebUI.Controllers.LocationController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l"
+Executing ViewResult, running view "SelectLocation".
+Executed ViewResult - view "SelectLocation" executed in 21.4913ms.
+Executed action "WebUI.Controllers.LocationController.SelectLocation (WebUI)" in 95.2623ms
+Executed endpoint '"WebUI.Controllers.LocationController.SelectLocation (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Location/SelectLocation?customerId=1 - - - 200 - text/html;+charset=utf-8 98.2692ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Route matched with "{action = \"Main\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Main(Int32)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("24"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Main".
+Executed ViewResult - view "Main" executed in 1.9173ms.
+Executed action "WebUI.Controllers.CustomerController.Main (WebUI)" in 27.2978ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - - - 200 - text/html;+charset=utf-8 28.6405ms
+Request starting HTTP/2 GET https://localhost:44360/Order/Sort?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.OrderController.Sort (WebUI)"'
+Route matched with "{action = \"Sort\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Sort(Int32)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("26"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Sort".
+Executed ViewResult - view "Sort" executed in 11.6177ms.
+Executed action "WebUI.Controllers.OrderController.Sort (WebUI)" in 43.2818ms
+Executed endpoint '"WebUI.Controllers.OrderController.Sort (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/Sort?customerId=1 - - - 200 - text/html;+charset=utf-8 46.0612ms
+Request starting HTTP/2 GET https://localhost:44360/Order/History?customerId=1&sortingCode=2 - -
+Executing endpoint '"WebUI.Controllers.OrderController.History (WebUI)"'
+Route matched with "{action = \"History\", controller = \"Order\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult History(Int32, System.String)" on controller "WebUI.Controllers.OrderController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("23"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executed DbCommand ("22"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT o.\"Id\", o.\"CustomerId\", o.\"LocationId\", o.\"OrderDate\", o.\"Total\"
+FROM \"Orders\" AS o
+WHERE o.\"CustomerId\" = @__customerId_0"
+Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT l.\"Id\", l.\"Address\", l.\"Name\"
+FROM \"Locations\" AS l
+WHERE l.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "History".
+Executed ViewResult - view "History" executed in 53.7086ms.
+Executed action "WebUI.Controllers.OrderController.History (WebUI)" in 166.713ms
+Executed endpoint '"WebUI.Controllers.OrderController.History (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Order/History?customerId=1&sortingCode=2 - - - 200 - text/html;+charset=utf-8 170.3174ms
+Request starting HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - -
+Executing endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Route matched with "{action = \"Main\", controller = \"Customer\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Main(Int32)" on controller "WebUI.Controllers.CustomerController" ("WebUI").
+Entity Framework Core "5.0.6" initialized '"StoreAppDBContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL"' with options: "None"
+Executed DbCommand ("23"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.\"Id\", c.\"FirstName\", c.\"LastName\", c.\"MiddleName\", c.\"PhoneNumber\"
+FROM \"Customers\" AS c
+WHERE c.\"Id\" = @__p_0
+LIMIT 1"
+Executing ViewResult, running view "Main".
+Executed ViewResult - view "Main" executed in 1.7303ms.
+Executed action "WebUI.Controllers.CustomerController.Main (WebUI)" in 26.4568ms
+Executed endpoint '"WebUI.Controllers.CustomerController.Main (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/Customer/Main?customerId=1 - - - 200 - text/html;+charset=utf-8 28.2761ms
+Request starting HTTP/2 GET https://localhost:44360/ - -
+Executing endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "WebUI.Controllers.HomeController" ("WebUI").
+Executing ViewResult, running view "Index".
+Executed ViewResult - view "Index" executed in 1.2952ms.
+Executed action "WebUI.Controllers.HomeController.Index (WebUI)" in 1.572ms
+Executed endpoint '"WebUI.Controllers.HomeController.Index (WebUI)"'
+Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 2.3551ms
