@@ -1,6 +1,6 @@
 # Store App 2.0
 ## Overview
-Can you imagine that you line up for 1 hour to get bubble tea from one of the popular bubble tea shops, like Happy Lemon? The idea of this *Bubble Tea Store App* is to help people save their time to order Bubble Tea online and help the store manager to manage their operation and provide best service to their customers.
+Can you imagine that you line up for 1 hour to order a bubble tea as the new normal? The idea of this *Bubble Tea Store App* is to help people save their time to order Bubble Tea online and help the store manager to manage their operation and provide best service to their customers.
 
 ## Tech Stack:
 * C#
