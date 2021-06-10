@@ -5,13 +5,19 @@ namespace StoreModels
         public Inventory()
         {}
 
-        public Inventory(int Quantity)
-        {
-            this.Quantity = Quantity;
-        }
-        public Inventory(int id, int quantity) : this(quantity)
+        // public Inventory(int Quantity)
+        // {
+        //     this.Quantity = Quantity;
+        // }
+        // public Inventory(int id, int quantity) : this(quantity)
+        // {
+        //     this.Id = id;
+        // }
+
+        public Inventory(int id, int quantity)
         {
             this.Id = id;
+            this.Quantity = quantity;
         }
         public int Id { get; set; }
 

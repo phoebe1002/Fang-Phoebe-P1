@@ -90,25 +90,6 @@ namespace WebUI.Controllers
             );
         }
 
-
-        public ActionResult Start(int locationId, int customerId)
-        {
-            ViewBag.Location = _locationBL.GetLocationById(locationId);
-            ViewBag.Customer = _customerBL.GetCustomerById(customerId);
-            ViewBag.Stock = _inventoryBL
-                .GetAvaliableProductsByInventory(_locationBL.GetLocationById(locationId))
-                .Select(
-                    inventory => new InventoryVM()
-                    {
-                        Id = inventory.Id,
-                        Quantity = inventory.Quantity,
-                        Product = _productBL.GetProductById(inventory.ProductId)
-                    })
-                .ToList();
-            
-            return View();
-        }
-
         public ActionResult AddToCart(int customerId, int locationId, int inventoryId, int productId, int id, string message)
         {
             ViewBag.Customer = _customerBL.GetCustomerById(customerId);
@@ -191,7 +172,8 @@ namespace WebUI.Controllers
                             Quantity = cart.Quantity,
                             Price = cart.Price,
                             Name = cart.Name,
-                            Total = cart.Quantity * cart.Price
+                            Total = cart.Quantity * cart.Price,
+                            Location = cart.Location
                         })
                 .ToList()
             );

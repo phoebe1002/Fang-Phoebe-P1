@@ -46,17 +46,29 @@ namespace StoreBL
 
         public List<Inventory> GetUnselectedProducts(Location location, int customerId)
         {
-            List<Cart> cartItems = _repo.GetAllCartItems(customerId);
+            //List<Cart> cartItems = _repo.GetAllCartItems(customerId);
+            List<Cart> cartItems = GetAllCartItems(customerId);
             List<Inventory> inventories = GetAvaliableProductsByInventory(location);
             List<Inventory> result = new List<Inventory>();
             foreach(Inventory inventory in inventories)
             {
-                if (!cartItems.Contains(_repo.GetCartItemByInventoryId(inventory.Id)))
+                if (!cartItems.Contains(GetCartItemByInventoryId(inventory.Id)))
                 {
                     result.Add(inventory);
                 }
             }
             return result;
         }
+
+        public List<Cart> GetAllCartItems(int customerId)
+        {
+            return _repo.GetAllCartItems(customerId);
+        }
+
+        public Cart GetCartItemByInventoryId(int inventoryId)
+        {
+            return _repo.GetCartItemByInventoryId(inventoryId);
+        }
+
     }
 }

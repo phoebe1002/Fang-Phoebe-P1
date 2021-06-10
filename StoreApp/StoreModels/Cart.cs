@@ -24,9 +24,7 @@ namespace StoreModels
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public string Name { get; set; }
-
-        // public Item item { get; set; }
-        // public Product Product { get; set;}
+        public Location Location { get; set; }
 
     }
 }

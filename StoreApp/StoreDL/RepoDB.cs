@@ -280,6 +280,7 @@ namespace StoreDL
         {
             return _context.Cart.FirstOrDefault(c => c.InventoryId == inventoryId);
         }
+
         public List<Cart> GetAllCartItems(int customerId)
         {
             return _context.Cart
@@ -294,7 +295,8 @@ namespace StoreDL
                     ProductId = cart.ProductId,
                     Quantity = cart.Quantity,
                     Price = cart.Price,
-                    Name = cart.Name
+                    Name = cart.Name,
+                    Location = _context.Locations.Find(cart.LocationId)
                 }
             ).ToList();
         }

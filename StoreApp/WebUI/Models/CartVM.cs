@@ -10,7 +10,6 @@ namespace WebUI.Models
 {
     public class CartVM
     {
-        private int _quantity = 0;
         public CartVM()
         {}
         public CartVM(Cart cart)
@@ -30,6 +29,7 @@ namespace WebUI.Models
         public int LocationId{ get; set; }
         public int InventoryId{ get; set; }
         public int ProductId{ get; set; }
+        public Location Location { get; set; }
 
         [Required]
         [Range(1, 100)]

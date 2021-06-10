@@ -12,5 +12,7 @@ namespace StoreBL
         List<Inventory> GetAvaliableProductsByInventory(Location location);
          List<Inventory> GetUnselectedProducts(Location location, int customerId);
         List<Inventory> GetInventories(Location location);   
+        List<Cart> GetAllCartItems(int customerId);
+        Cart GetCartItemByInventoryId(int inventoryId);
     }
 }

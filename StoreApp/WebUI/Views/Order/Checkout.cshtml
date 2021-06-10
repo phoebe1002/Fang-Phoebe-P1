@@ -5,7 +5,6 @@
 }
 
 <h2>Hello @customer.FirstName</h2>
-<h4>Your Store: @ViewBag.Location.Name</h4>
 <hr />
 <br>
 <h3>Cart Details</h3>
@@ -25,6 +24,11 @@
     <table class="table">
         <thead>
             <tr>
+                @* Show location here *@
+                <th>
+                    @* @Html.DisplayNameFor(model => model.Location.Name) *@
+                    Location
+                </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Id)
                 </th>
@@ -46,6 +50,9 @@
         <tbody>
     @foreach (var item in Model) {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location.Name)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
