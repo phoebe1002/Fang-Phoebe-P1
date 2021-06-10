@@ -2,6 +2,8 @@
 ## Overview
 Can you imagine that you line up for 1 hour to order a bubble tea as the new normal? The idea of this *Bubble Tea Store App* is to help people save their time to order Bubble Tea online and help the store manager to manage their operation and provide best service to their customers.
 
+It's up on azure: https://bbtstore.azurewebsites.net/
+
 ![BBT](https://github.com/210503-Reston-NET/Fang-Phoebe-P1/blob/main/assets/BBT.png)
 
 ## Tech Stack:
