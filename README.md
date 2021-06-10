@@ -2,6 +2,8 @@
 ## Overview
 Can you imagine that you line up for 1 hour to order a bubble tea as the new normal? The idea of this *Bubble Tea Store App* is to help people save their time to order Bubble Tea online and help the store manager to manage their operation and provide best service to their customers.
 
+![BBT](https://github.com/210503-Reston-NET/Fang-Phoebe-P1/blob/main/assets/BBT.jpg)
+
 ## Tech Stack:
 * C#
 * Entity Framework Core
@@ -25,8 +27,6 @@ Can you imagine that you line up for 1 hour to order a bubble tea as the new nor
 * The customer should be able to purchase multiple products
 * Order histories should have the option to be sorted by date (latest to oldest and vice versa) or cost (least expensive to most expensive)
 * The manager should be able to replenish inventory
-
-![BBT](https://github.com/210503-Reston-NET/Fang-Phoebe-P1/blob/main/assets/BBT.jpg)
 
 ## User Stories
 * As a customer, I can use my phone number to sign in.
