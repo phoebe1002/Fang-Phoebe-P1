@@ -25,7 +25,7 @@ Can you imagine that you line up for 1 hour to order a bubble tea as the new nor
 * The customer should be able to purchase multiple products
 * Order histories should have the option to be sorted by date (latest to oldest and vice versa) or cost (least expensive to most expensive)
 * The manager should be able to replenish inventory
-
+![BBT](https://github.com/210503-Reston-NET/Fang-Phoebe-P1/blob/main/assets/BBT.jpg)
 ## User Stories
 * As a customer, I can use my phone number to sign in.
 * As a customer, I can check if I already have an existing account when signing up.
@@ -60,3 +60,4 @@ Can you imagine that you line up for 1 hour to order a bubble tea as the new nor
 * Use ASP.NET MVC for the UI
 * DB structure is 3NF
 * Have an ER Diagram
+![ERD](https://github.com/210503-Reston-NET/Fang-Phoebe-P1/blob/main/assets/ERD.png)
