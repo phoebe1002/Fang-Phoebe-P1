@@ -22,25 +22,36 @@ steps:
       scannerMode: 'MSBuild'
       projectKey: '210503-Reston-NET_Fang-Phoebe-P1'
       projectName: 'Fang-Phoebe-P1'
-      
+      extraProperties: 'sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml'
+
   - task: DotNetCoreCLI@2
     displayName: Restore
     inputs:
       command: 'restore'
       projects: $(solution)
       feedsToUse: 'select'
- 
+
   - task: DotNetCoreCLI@2
     displayName: Build
     inputs:
       command: 'build'
       projects: $(solution)
+
   - task: DotNetCoreCLI@2
     displayName: Test
     inputs:
       command: 'test'
-      projects: '**/StoreApp/StoreTests/*.csproj'
-  
+      projects: '$(solution)'
+      arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true "/p:CoverletOutputFormat=\"opencover,Cobertura\"" /p:excludebyfile=\"**/DL/Migrations/*.cs\"'
+      publishTestResults: true  
+
+  - task: PublishCodeCoverageResults@1
+    displayName: Publish Code Coverage Report
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
+      reportDirectory: '$(Build.SourcesDirectory)/StoreApp/StoreTests/' 
+
   - task: SonarCloudPublish@1
     displayName: Run Code Analysis
   - task: SonarCloudPublish@1
