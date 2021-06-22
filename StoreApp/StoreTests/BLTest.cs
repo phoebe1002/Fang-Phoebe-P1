@@ -17,7 +17,7 @@ namespace StoreTests
         ILocationBL locationBL;
         ICustomerBL customerBL;
         List<Inventory> inventories;
-        List<Cart> cartItems;
+        Tuple<List<Cart>, decimal> cartItems;
 
         List<Inventory> AvailableProductByInventory;
         Location location;
@@ -68,7 +68,7 @@ namespace StoreTests
             );
 
             orderBL = new OrderBL(mockRepo.Object);
-            cartItems = inventoryBL.GetAllCartItems(1);
+            cartItems = orderBL.GetAllCartItems(1);
 
             mockRepo.Setup(x => x.GetLocation(It.IsAny<Location>())).Returns
             (
@@ -144,7 +144,7 @@ namespace StoreTests
         [Fact]
         public void GetCartItemsShouldReturnRigthtCount()
         {
-            Assert.Equal(1, cartItems.Count);
+            Assert.Equal(1, cartItems.Item1.Count);
         }
 
         [Fact]
@@ -156,7 +156,7 @@ namespace StoreTests
         [Fact]
         public void GetCartItemsShouldReturnRightItem()
         {
-            Assert.Equal(2, cartItems[0].Quantity);
+            Assert.Equal(2, cartItems.Item1[0].Quantity);
         }
 
          [Fact]
@@ -183,7 +183,7 @@ namespace StoreTests
             List<Inventory> result = new List<Inventory>();
             foreach(Inventory inventory in inventories)
             {
-                foreach(Cart cart in cartItems)
+                foreach(Cart cart in cartItems.Item1)
                 {
                     if (cart.InventoryId != inventory.Id)
                     {
